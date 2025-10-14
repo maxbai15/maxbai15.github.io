@@ -61,7 +61,7 @@ plugins:
 
 author:
   name   : "Max Bai"
-  avatar : "/assests/images/bai-photo.jpg"
+  avatar : "/assests/images/bio-photo.jpg"
   bio    : "Hi, I'm Max Bai, a senior at Charlotte Latin interested in CS/engineering and soccer."
   links:
     - label: "Website"
