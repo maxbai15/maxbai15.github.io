@@ -2,7 +2,7 @@
 
 **Timeline:**
 
-8/28:
+8/28
 Laser cut and assembled a personal box to hold my materials.
 
 **Image of Assembled  Box:**
