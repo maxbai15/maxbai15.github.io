@@ -1,18 +1,15 @@
-# 🏔️ Creating a Topographic Mountain Model: Terrain2STL to Makera Carvera ATC
+# Creating a Topographic Mountain Model: Terrain2STL to Makera Carvera ATC
 
 This post details the end-to-end workflow for transforming real-world terrain data into a physical 3D model using a combination of **Terrain2STL**, **Vectric Aspire 12.5**, and the **Makera Carvera ATC CNC** machine.
 
----
 
-## 🖼️ Project Showcase
+## Project Showcase
 
 
 
 *(Image: The finished CNC-carved topographic mountain model, showcasing the vertical relief and detail.)*
 
----
-
-## ⚙️ Workflow: Topographic Maps Creation
+## Workflow: Topographic Maps Creation
 
 The process is divided into three main phases: Data Acquisition (Terrain2STL), CAD/CAM (Aspire), and CNC Machining (Carvera).
 
@@ -92,7 +89,7 @@ This final pass cuts the finished model out of the stock.
 
 ---
 
-## 🚧 Challenge & Resolution
+## Challenge & Resolution
 
 | Issue Encountered | Resolution Strategy |
 | :--- | :--- |
@@ -105,7 +102,7 @@ This final pass cuts the finished model out of the stock.
 
 ---
 
-## 📝 Project Summary
+## Project Summary
 
 ### What I Learned
 
@@ -125,7 +122,7 @@ My next project is to machine a larger version of this mountain, adding the **en
 
 ---
 
-## 📦 Project Files
+## Project Files
 
 You can find the necessary project files below for review and replication:
 
@@ -133,6 +130,5 @@ You can find the necessary project files below for review and replication:
 * [`TOPO_MOUNTAIN_TOOLPATHS.cnc`](./TOPO_MOUNTAIN_TOOLPATHS.cnc) - The Makera Carvera ATC G-Code file (combines Rough, Finish, and Profile).
 * [`STL_Mountain_Export.stl`](./STL_Mountain_Export.stl) - The raw 3D model exported from Terrain2STL.
 
----
 
 Would you like me to draft a brief post for social media to announce this GitHub update?
