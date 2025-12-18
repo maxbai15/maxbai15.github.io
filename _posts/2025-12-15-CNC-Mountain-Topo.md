@@ -5,7 +5,9 @@ This post details the end-to-end workflow for transforming real-world terrain da
 
 ## Final Topography Image
 
-*(Image: The finished CNC-carved topographic mountain model, showcasing the vertical relief and detail.)*
+
+
+## Topography Cutting Process
 
 ## Workflow -- Topographic Maps Creation
 
