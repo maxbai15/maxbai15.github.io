@@ -76,9 +76,7 @@ This post details the end-to-end workflow for transforming real-world terrain da
 The most critical takeaway is the relationship between the digital design and the physical material constraints.
 
 * **Z-Scale is Key:** Ensuring the right Z-axis in Terrain2STL is crucial for achieving clear topographic visibility on a small-scale CNC model and making sure that the mountain cuts with the right dimensions.
-* 
 * **Aspire's Base Height:** Understanding the Base Height properties in Aspire is crucial for correctly positioning the 3D component relative to the stock surface, preventing material from being cut off or wasted.
-  
 * * **Aspire's Toolpaths:** Understanding which toolpath to use for the model is crucial, so you are able to use the correct techqnieus with the precise tool to accurately cut your topography.
 
 ### Future Plans
