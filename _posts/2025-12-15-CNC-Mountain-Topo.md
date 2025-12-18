@@ -121,4 +121,4 @@ You can find the necessary project files below for review and replication:
 
 * [`TOPO_MOUNTAIN_PROJECT.crv3d`](/assets/files/MaxBaiTopo.crv3d) - The native Aspire project file.
 * [`TOPO_MOUNTAIN_TOOLPATHS.cnc`](/assets/files/MaxBaiTopo.cnc) - The Makera Carvera ATC G-Code file (combines Rough, Finish, and Profile).
-* [`STL_Mountain_Export.stl`](/assets/files/MaxBaiTopo.crv3d) - The raw 3D model exported from Terrain2STL.
+* [`STL_Mountain_Export.stl`](/assets/files/terrain-92631.stl) - The raw 3D model exported from Terrain2STL.
