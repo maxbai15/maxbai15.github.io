@@ -117,6 +117,7 @@ My next project is to machine a larger version of this mountain, adding the **en
 ## Project Files
 
 You can find the necessary project files below for review and replication:
+MaxBaiTopo.crv3d
 
 * [`TOPO_MOUNTAIN_PROJECT.crv3d`](./TOPO_MOUNTAIN_PROJECT.crv3d) - The native Aspire project file.
 * [`TOPO_MOUNTAIN_TOOLPATHS.cnc`](./TOPO_MOUNTAIN_TOOLPATHS.cnc) - The Makera Carvera ATC G-Code file (combines Rough, Finish, and Profile).
