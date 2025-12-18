@@ -5,9 +5,12 @@ This post details the end-to-end workflow for transforming real-world terrain da
 
 ## Final Topography Image
 
-
+![screenshot](/assets/files/IMG_2527.jpeg)
 
 ## Topography Cutting Process
+
+![screenshot](/assets/files/IMG_2532.jpeg)
+![screenshot](/assets/files/IMG_2528.MOV)
 
 ## Workflow -- Topographic Maps Creation
 
