@@ -33,14 +33,14 @@ This phase prepares the model for cutting and generates the toolpaths.
 
 1.  **Create New File & Define Stock:**
     * Set **Job Type** to **Single Sided**.
-    * Set **Job Size (X, Y)** and **Thickness (Z)** to match your physical stock material (e.g., $X=5$ inches, $Y=7$ inches, $Z=1$ inch).
+    * Set **Job Size (X, Y)** and **Thickness (Z)** to match your physical stock material (e.g., X=5 inches, Y=7 inches, Z=1 inch).
     * **Z Zero Position:** Set to **Material Surface** (essential for the Carvera).
     * **XY Datum Position:** Set to **Bottom Left**.
     
 2.  **Import & Orient 3D Model:**
     * Go to the **Modeling** tab and click **Import a Component or 3D Model**. Select your `.stl` file.
     * In the **3D Orientation** window, set **Initial Orientation** to **Top**.
-    * **Model Size:** **Uncheck the lock** to adjust the Z-size independently. Set the Z height to a value **less than or equal to** your stock thickness (e.g., $Z=0.95$ inches for 1-inch stock).
+    * **Model Size:** **Uncheck the lock** to adjust the Z-size independently. Set the Z height to a value **less than or equal to** your stock thickness (e.g., Z=0.95 inches for 1-inch stock).
     * Click **Apply**, **Center Model**, and then **Position and Import**.
 
 #### Phase 2: Sizing and Base Adjustments
@@ -59,12 +59,12 @@ This phase prepares the model for cutting and generates the toolpaths.
 We use a Roughing pass to clear the bulk, followed by a Finishing pass for detail.
 
 1.  **3D Roughing Pass:**
-    * **Tool:** $1/8"$ Flute End Mill (Tool #1 for the Carvera ATC).
+    * **Tool:** 1/8" Flute End Mill (Tool #1 for the Carvera ATC).
     * **Machining Limit Boundary:** Select the Model Boundary (the vector you created).
     * **Machining Allowance:** Set to **0.024"** to leave material for the finer finishing bit.
     * **Strategy:** Z Level.
 2.  **3D Finishing Pass:**
-    * **Tool:** $1/8"$ Ball Nose (Tool #6 for the Carvera ATC). *(A smaller tool would add more detail, but this balances detail and time for the initial run.)*
+    * **Tool:** 1/8" Ball Nose (Tool #6 for the Carvera ATC). *(A smaller tool would add more detail, but this balances detail and time for the initial run.)*
     * **Strategy:** Raster, set at a **0-degree angle** to run along the grain of the wood.
     
 
@@ -73,7 +73,7 @@ We use a Roughing pass to clear the bulk, followed by a Finishing pass for detai
 This final pass cuts the finished model out of the stock.
 
 1.  **2D Profile Toolpath:**
-    * **Tool:** $1/8"$ Flute End Mill (Tool #1).
+    * **Tool:** 1/8" Flute End Mill (Tool #1).
     * **Cut Depth:** Set to **0.5 inch** (or a desired depth to create a small base).
     * **Machine Vectors:** Select **On the line**.
     * **Note:** If you intend to cut all the way through the stock, ensure you use the proper **Cut Depth** and add **Tabs** (I opted for a partial cut and used a bandsaw for final separation).
@@ -91,16 +91,8 @@ This final pass cuts the finished model out of the stock.
 
 ## Challenge & Resolution
 
-| Issue Encountered | Resolution Strategy |
-| :--- | :--- |
-| **Initial Relief Too Flat** | The first attempt used the default Z-Scale of $1.0$ in Terrain2STL. The resulting model was virtually flat, lacking the dramatic mountain topography. |
-| **Resolution:** I adjusted the **Vertical Scaling (Z-Scale)** in Terrain2STL to **2.5**. This exaggerated the vertical features, making the final CNC model visually striking and clearly topographic. |
-| **Z-Height Alignment Error** | During the Aspire import, the default Z-size and Base Height placed the component too low, cutting off the highest peaks of the relief when viewed from the front. |
-| **Resolution:** Manually set the **Model Size Z** to $0.95$ in the Import window, and then in the Component Properties, set **Base Height** to **0.0**. This properly aligns the bottom of the model with the zero plane and positions the top of the relief just below the material surface. |
+Today I started trying to mill my topography graph. I uploaded the file into makeraCam, but it appeared upside down at first, but after going back to the aspire file everythign seemed fine. In the end, the upside down showing up on makeraCam was just an illusion. Additionally, when starting to cut it was in the wrong spot because the machine was set to anchor 2 instead of anchor 1.
 
-
-
----
 
 ## Project Summary
 
@@ -113,7 +105,7 @@ The most critical takeaway is the relationship between the digital design and th
 
 ### What I Would Do Differently
 
-* **Smaller Ball Nose:** For a more detailed finish, I would upgrade to a $1/16"$ or even $0.8 \text{ mm}$ Ball Nose bit for the Finishing Pass. While it increases machine time, the contour lines and subtle elevation changes would be rendered more accurately.
+* **Smaller Ball Nose:** For a more detailed finish, I would upgrade to a 1/16" or even 0.8mm Ball Nose bit for the Finishing Pass. While it increases machine time, the contour lines and subtle elevation changes would be rendered more accurately.
 * **Contour Lines:** I plan to incorporate a V-carve toolpath to engrave the topographic contour lines onto the surface *after* the 3D finishing pass. This would add a beautiful, map-like layer of detail.
 
 ### Future Plans
@@ -129,6 +121,3 @@ You can find the necessary project files below for review and replication:
 * [`TOPO_MOUNTAIN_PROJECT.crv3d`](./TOPO_MOUNTAIN_PROJECT.crv3d) - The native Aspire project file.
 * [`TOPO_MOUNTAIN_TOOLPATHS.cnc`](./TOPO_MOUNTAIN_TOOLPATHS.cnc) - The Makera Carvera ATC G-Code file (combines Rough, Finish, and Profile).
 * [`STL_Mountain_Export.stl`](./STL_Mountain_Export.stl) - The raw 3D model exported from Terrain2STL.
-
-
-Would you like me to draft a brief post for social media to announce this GitHub update?
