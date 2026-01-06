@@ -31,12 +31,18 @@ This post details the end-to-end workflow for transforming real-world terrain da
     * Set **Job Size (X, Y)** and **Thickness (Z)** to match your physical stock material (e.g., X=5 inches, Y=7 inches, Z=1 inch).
     * **Z Zero Position:** Set to **Material Surface** (essential for the Carvera).
     * **XY Datum Position:** Set to **Bottom Left**.
-    
+
+<img width="193" height="175" alt="dimensions" src="https://github.com/user-attachments/assets/83a4a479-e0ed-4417-8e5b-97432994d1f6" />
+
+
 6.  **Import & Orient 3D Model:**
     * Go to the **Modeling** tab and click **Import a Component or 3D Model**. Select your `.stl` file.
     * In the **3D Orientation** window, set **Initial Orientation** to **Top**.
     * **Model Size:** **Uncheck the lock** to adjust the Z-size independently. Set the Z height to a value **less than or equal to** your stock thickness (e.g., Z=0.95 inches for 1-inch stock).
     * Click **Apply**, **Center Model**, and then **Position and Import**.
+
+<img width="197" height="457" alt="orient" src="https://github.com/user-attachments/assets/a0c0dae0-7a1e-4f9d-b592-2ad7b37777e1" />
+
 
 7.  **Component Properties:** In the **Component Tree**, right-click the imported component and select **Properties**.
     * Set **Shape Height** to the final desired height (e.g., **1.0 inch**).
@@ -45,24 +51,30 @@ This post details the end-to-end workflow for transforming real-world terrain da
 8.  **Center the Component:** Switch to the **2D View** (Design Tab), select the model, and use the **Center** tool to align it with the stock.
 9.  **Create Boundary Vector:** Use the **Draw Rectangle** tool to create a vector that outlines the final dimensions of your piece. This vector will be used for both machining limits and the final profile cut.
 
+<img width="390" height="212" alt="center" src="https://github.com/user-attachments/assets/516b5685-e020-48f2-b76b-e34719bf1583" />
+
 10.  **3D Roughing Pass:**
     * **Tool:** 1/8" Flute End Mill (Tool #1 for the Carvera ATC).
     * **Machining Limit Boundary:** Select the Model Boundary (the vector you created).
     * **Machining Allowance:** Set to **0.024"** to leave material for the finer finishing bit.
     * **Strategy:** Z Level.
-11.  **3D Finishing Pass:**
+
+
+12.  **3D Finishing Pass:**
     * **Tool:** 1/8" Ball Nose (Tool #6 for the Carvera ATC). *(A smaller tool would add more detail, but this balances detail and time for the initial run.)*
     * **Strategy:** Raster, set at a **0-degree angle** to run along the grain of the wood.
 
-12.  **2D Profile Toolpath:**
+13.  **2D Profile Toolpath:**
     * **Tool:** 1/8" Flute End Mill (Tool #1).
     * **Cut Depth:** Set to **0.5 inch** (or a desired depth to create a small base).
     * **Machine Vectors:** Select **On the line**.
     * **Note:** If you intend to cut all the way through the stock, ensure you use the proper **Cut Depth** and add **Tabs** (I opted for a partial cut and used a bandsaw for final separation).
 
-13.  **Preview All Toolpaths:** Click the **Preview all Toolpaths** button. Critically examine the simulation. Does the relief look right? Are there any missed areas or unexpected cuts?
-    
-14.  **Save G-Code:**
+14.  **Preview All Toolpaths:** Click the **Preview all Toolpaths** button. Critically examine the simulation. Does the relief look right? Are there any missed areas or unexpected cuts?
+
+<img width="215" height="195" alt="final" src="https://github.com/user-attachments/assets/388efd3c-dc91-436e-8ee4-8bbd360ecf5f" />
+
+15.  **Save G-Code:**
     * Click **Save Toolpaths**.
     * Select all three toolpaths (**3D Rough**, **3D Finish**, **2D Profile**).
     * Choose the **Carvera ATC (mm) (\*cnc)** post-processor. This combines the cuts into a single file for automated tool changes on the Carvera.
