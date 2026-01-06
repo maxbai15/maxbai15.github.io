@@ -28,8 +28,16 @@ Ultimately, success for this project means creating a tool that saves time, impr
 ### Step 1: Configuration Setup  
 A YAML file is created for each yearbook yearbook for metadata: page ranges for each section (e.g. clubs, sports, etc.) and expected counts of names for validation. This YAML file serves as a helpful guide for the AI throughout the entire extraction process.
 
+**Example YAML File:**
+
+<img width="511" height="316" alt="yaml" src="https://github.com/user-attachments/assets/272a51b2-a6d7-4e00-95b4-00340a2b9308" />
+
 ### Step 2: Parallel Extractions  
 The system uses Python multiprocessing to extract multiple yearbook pages simultaneously with each parallel script extracting a different secrtion and page at the same time to increase speed and efficiency. These scripts are created to extract different sections of the yearbook like lower schoolers vs sports.
+
+**Example of Different Sections of Parallel Scripts:**
+
+<img width="323" height="237" alt="parallel" src="https://github.com/user-attachments/assets/3d7ce3e2-7326-4873-b68a-6a4bdcb017fe" />
 
 ### Step 3: Orchestration  
 A universal orchestration script runs all extraction scripts in parallel based with the help of the pre-determined page number sections in the YAML file. It successfully extracts information and outputs into a unified database for review.
@@ -42,6 +50,10 @@ Remaining unmatched names are exported to a CSV for human review using a spreads
 
 ### Step 6: Apply Corrections  
 Manual corrections from the CSV are validated and merged back into the database with the previously approved data. The final output is then ready for use.
+
+**Example of Student in JSON Final Output:**
+
+<img width="338" height="712" alt="student_output" src="https://github.com/user-attachments/assets/2a592928-65e9-4acf-8922-1397e4a67e14" />
 
 
 ## Struggles
