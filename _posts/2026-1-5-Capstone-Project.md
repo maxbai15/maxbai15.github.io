@@ -4,7 +4,7 @@
 
 ## Description of Capstone
 
-For my capstone project, I chose to help design and build an **automated data extraction and analysis tool** that helps collect and organize large sets of raw information from past yearbooks at Charlotte Latin and turn it into a preservable digital database. The goal of the project is to reduce the amount of manual work required when trying to access data from decades of yearbooks and creating a digital database to preserve the information throughout time.
+For my capstone project, I chose to help design and build an automated data extraction and analysis tool that helps collect and organize large sets of raw information from past yearbooks at Charlotte Latin and turn it into a preservable digital database. The goal of the project is to reduce the amount of manual work required when trying to access data from decades of yearbooks and creating a digital database to preserve the information throughout time.
 
 I chose this project because it allows me to combine the theoretical coding I have been learning to real-world applications. This project enables me to use my abilties to create a useful tool for the community my school and community.
 
