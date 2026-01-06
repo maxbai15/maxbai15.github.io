@@ -14,6 +14,7 @@ This post details the end-to-end workflow for transforming real-world terrain da
 ## Workflow -- Topographic Maps Creation
 
 1.  **Access and Location:** Navigate to [https://jthatch.com/Terrain2STL/](https://jthatch.com/Terrain2STL/). Click **Center to View** to place the initial red selection box.
+
 2.  **Define the Model Area:** Pan and drag the red box to precisely cover the mountainous area you wish to model.
     
 3.  **Adjust Model Settings:** Crucial adjustments for a mountain model:
@@ -21,6 +22,9 @@ This post details the end-to-end workflow for transforming real-world terrain da
     * **Base Height (mm):** Set to a small value, like **1.0 mm**, to ensure the model has a solid base for CNC carving.
 4.  **Generate and Download:** Click **Generate Model**. The website will process the data and download a `.ZIP` file containing the `.stl` file.
 
+**My Terrain:**
+
+<img width="1272" height="851" alt="terrain" src="https://github.com/user-attachments/assets/1ba8e6b4-817f-4ce8-b0f7-fd3bf031a6a2" />
 
 5.  **Create New File & Define Stock:**
     * Set **Job Type** to **Single Sided**.
@@ -28,7 +32,7 @@ This post details the end-to-end workflow for transforming real-world terrain da
     * **Z Zero Position:** Set to **Material Surface** (essential for the Carvera).
     * **XY Datum Position:** Set to **Bottom Left**.
     
-5.  **Import & Orient 3D Model:**
+6.  **Import & Orient 3D Model:**
     * Go to the **Modeling** tab and click **Import a Component or 3D Model**. Select your `.stl` file.
     * In the **3D Orientation** window, set **Initial Orientation** to **Top**.
     * **Model Size:** **Uncheck the lock** to adjust the Z-size independently. Set the Z height to a value **less than or equal to** your stock thickness (e.g., Z=0.95 inches for 1-inch stock).
