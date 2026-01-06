@@ -70,8 +70,7 @@ librarian counted duplicate names on the same page.
 12/15:
 Today, I modified the 1979 yearbook to have the page numbers of the pdf align with the actual page numbers of the yearbook. Additioanlly, I checked the librarians count in the 1979 YAML file.
 
-## Reflection (Ongoing)
+## Reflection 
 
-This project taught me that large projects are less about technical difficulty and more about **organization, persistence, and adaptability**. I learned that mistakes are not setbacks but signals that something needs to be redesigned or clarified. Moving forward, I would like to expand this tool into a more user-friendly application with a graphical interface and broader dataset support.
 
 
