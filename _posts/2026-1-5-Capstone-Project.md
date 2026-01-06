@@ -15,8 +15,6 @@ A successful project would:
 
 Ultimately, success for this project means creating a tool that saves time, improves accuracy, and can realistically be continously used in future years to make an efficient way to continue adding data to a digital searchable database.
 
-## INSTRUCTIONS SECTION  
-
 ## Tools Used 
 
 ### Software Tools:
