@@ -70,7 +70,5 @@ librarian counted duplicate names on the same page.
 12/15:
 Today, I modified the 1979 yearbook to have the page numbers of the pdf align with the actual page numbers of the yearbook. Additioanlly, I checked the librarians count in the 1979 YAML file.
 
-## Reflection 
-
 
 
