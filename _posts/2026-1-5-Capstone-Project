@@ -48,19 +48,29 @@ Remaining unmatched names are exported to a CSV for human review using a spreads
 Manual corrections from the CSV are validated and merged back into the database with the previously approved data. The final output is then ready for use.
 
 
-## Struggles, Challenges, and How I Overcame Them
+## Struggles
 
-One of my biggest struggles was debugging logic errors that did not produce obvious crashes but resulted in incorrect outputs. At first, it was frustrating because the program appeared to run correctly while silently producing flawed data.
+One of the main challenges I faced was validating and correcting the YAML configuration files that control the entire extraction workflow. The initial YAML files were partially generated using AI, but when I 
+manually reviewed the 1975 yearbook, I found that many page numbers, name counts, and even names were incorrect. In several  sections, the AI had generated names that did not exist in the yearbook at all, 
+while sports sections were only occasionally accurate. To fix this, I went page by page through the PDF and compared it against the YAML file. Instead of tracking individual names, I instead ensured 
+that page ranges and expected person counts were correct since those are critical for validation whearas specific names weren't as important.
 
-I overcame this by:
-- Breaking the script into smaller, testable sections
-- Printing intermediate values to verify assumptions
-- Using version control to safely experiment without losing progress
+## Daily Journal
 
-Another major challenge was time management. I underestimated how long it would take to properly document the process. Once I realized this, I adjusted my workflow to document as I worked rather than waiting until the end.
+12/10:
+Today, I went through the 1975 final yearbook pdf to comapre the page numbers and name counts with the 1975 YAML file. When doing this, I first noticed that the names, name counts, and page numbers 
+were incorrect majority of the time(AI attempted the first try). While it sometimes got the page numbers right(more for sports groups) and names correct, a lot of the names were made up and not within the yearbook (this happened
+for the class pictures and names a lot). 
 
-These challenges forced me to slow down, think more critically, and develop better habits as both a programmer and project manager.
+12/11:
+I continued working on the 1975 YAML and finished fixing it this class. Instead of tracking names, the main focus was getting the page number and count of names right.
 
+12/12:
+Today, I started checking the 1977 YAML file. In this one, the librarians also had a name count with page numbers. After checking, majority of the name counts were correct, the only thing was that for each page, the 
+librarian counted duplicate names on the same page.
+
+12/15:
+Today, I modified the 1979 yearbook to have the page numbers of the pdf align with the actual page numbers of the yearbook. Additioanlly, I checked the librarians count in the 1979 YAML file.
 
 ## Reflection (Ongoing)
 
